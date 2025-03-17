@@ -246,11 +246,15 @@
     @media (max-width: 768px) {
         .carousel-slide {
             flex: 0 0 100%;
+            scroll-snap-align: center;
         }
         
         .carousel-image {
             height: 280px;
             border-radius: 15px;
+        }
+        .carousel-track {
+            justify-content: flex-start;
         }
         
         .gallery-title {
@@ -258,7 +262,7 @@
             margin-bottom: 2rem;
         }
     }
-
+    
         .contact-section {
             padding: 4rem 2rem;
             background: white;
@@ -363,45 +367,8 @@
             <button class="carousel-btn prev">❮</button>
             <button class="carousel-btn next">❯</button>
             
-            <div class="carousel-track">
-                <!-- Slides -->
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Nail Design 1" class="carousel-image">
-                <div class="gallery-caption">French Elegance</div>
-                </div>
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slides will be inserted here by JavaScript -->
             </div>
         </div>
         
@@ -430,6 +397,19 @@
     </footer>
 
     <script>
+        const nailArtGallery = [
+    { filename: "1.jpg" },
+    { filename: "2.jpg" },
+    { filename: "3.jpg" },
+    { filename: "4.jpg" },
+    { filename: "5.jpg" },
+    { filename: "6.jpg" },
+    { filename: "7.jpg" },
+    { filename: "8.jpg" },
+    { filename: "9.jpg" },
+    { filename: "10.jpg" },
+    // Add more images as needed...
+];
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -440,12 +420,27 @@
         });
 
         // Carousel functionality
+        document.addEventListener('DOMContentLoaded', () => {
+    const carouselTrack = document.getElementById('carouselTrack');
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    // Generate slides from img folder
+    nailArtGallery.forEach((image, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        slide.innerHTML = `
+            <img src="img/${image.filename}" alt="${image.caption}" class="carousel-image">
+        `;
+        carouselTrack.appendChild(slide);
+    });
+
+    // Initialize carousel after creating slides
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-    const dotsContainer = document.querySelector('.carousel-dots');
     let currentIndex = 0;
 
     // Create dots
+    dotsContainer.innerHTML = ''; // Clear existing dots
     slides.forEach((_, index) => {
         const dot = document.createElement('span');
         dot.classList.add('dot');
@@ -454,6 +449,7 @@
         dotsContainer.appendChild(dot);
     });
 
+    // Carousel controls
     document.querySelector('.next').addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % slides.length;
         updateCarousel();
@@ -470,17 +466,16 @@
     }
 
     function updateCarousel() {
-        const slideWidth = document.querySelector('.carousel-slide').clientWidth;
+        const slideWidth = slides[0].clientWidth;
         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        
-        // Update dots
-        document.querySelectorAll('.dot').forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
 
     // Handle responsive changes
     window.addEventListener('resize', updateCarousel);
+});
     </script>
 </body>
 </html>
