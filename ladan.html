@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladan's Beauty Garden - Professional Nail Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary-pink: #F8D7E6;
+            --accent-pink: #FFA1C9;
+            --brand-pink: #FF7EB6;
+            --dark-pink: #E85D8F;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--dark-pink);
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-pink);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(248,215,230,0.7), rgba(248,215,230,0.7)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--dark-pink);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 6px rgba(255,255,255,0.4);
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            background-color: var(--primary-pink);
+        }
+
+        .service-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border: 2px solid var(--accent-pink);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-section {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: var(--primary-pink);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .contact-info p {
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--dark-pink);
+            font-size: 2.5rem;
+            margin: 0 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: var(--brand-pink);
+        }
+
+        footer {
+            background-color: var(--brand-pink);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .social-links a {
+                font-size: 2rem;
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ladan's Beauty Garden</div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mobile Nail Artistry & Care</h1>
+            <p>Bringing Beauty to Your Doorstep in Dire Dawa</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Luxury Manicures</h3>
+                <p>Premium gel treatments and spa experiences</p>
+            </div>
+            <div class="service-card">
+                <h3>Creative Nail Art</h3>
+                <p>Custom designs that reflect your personality</p>
+            </div>
+            <div class="service-card">
+                <h3>Nail Wellness</h3>
+                <p>Specialized care for healthy, strong nails</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact & Booking</h2>
+                <p><i class="fas fa-map-marker-alt"></i> House Calls in Dire Dawa, Ethiopia</p>
+                <p><i class="fas fa-phone"></i> (+251) 912-345-678</p>
+                <p><i class="fas fa-envelope"></i> ladan@beautygarden.com</p>
+                <div class="social-links">
+                    <a href="[Instagram URL]" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="[Telegram URL]" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 Ladan's Beauty Garden. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
