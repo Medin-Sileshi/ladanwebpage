@@ -1,168 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ladan's Beauty Garden - Professional Nail Care</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
 
-        :root {
-            --primary-pink: #F8D7E6;
-            --accent-pink: #FFA1C9;
-            --brand-pink: #FF7EB6;
-            --dark-pink: #E85D8F;
-        }
+      :root {
+        --primary-pink: #f8d7e6;
+        --accent-pink: #ffa1c9;
+        --brand-pink: #ff7eb6;
+        --dark-pink: #e85d8f;
+      }
 
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--dark-pink);
-            font-weight: 700;
-        }
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        color: var(--dark-pink);
+        font-weight: 700;
+      }
 
-        .nav-links a {
-            margin-left: 2rem;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+      .nav-links a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
 
-        .nav-links a:hover {
-            color: var(--brand-pink);
-        }
+      .nav-links a:hover {
+        color: var(--brand-pink);
+      }
 
-        .hero {
-            background: linear-gradient(rgba(248,215,230,0.7), rgba(248,215,230,0.7)), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      .hero {
+        background: linear-gradient(
+            rgba(248, 215, 230, 0.7),
+            rgba(248, 215, 230, 0.7)
+          ),
+          url("https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        padding: 8rem 2rem 4rem;
+        text-align: center;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--dark-pink);
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 6px rgba(255,255,255,0.4);
-        }
+      .hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        color: var(--dark-pink);
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4);
+      }
 
-        .services {
-            padding: 4rem 2rem;
-            background-color: var(--primary-pink);
-        }
+      .services {
+        padding: 4rem 2rem;
+        background-color: var(--primary-pink);
+      }
 
-        .service-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-        }
+      .service-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+      }
 
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border: 2px solid var(--accent-pink);
-        }
+      .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        border: 2px solid var(--accent-pink);
+      }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
+      .service-card:hover {
+        transform: translateY(-5px);
+      }
 
-    /* Gallery Carousel Styles */
-    .gallery {
+      /* Gallery Carousel Styles */
+      .gallery {
         padding: 4rem 1rem;
         background-color: #fff5f8;
         position: relative;
-    }
+      }
 
-    .gallery-title {
+      .gallery-title {
         text-align: center;
-        font-family: 'Playfair Display', serif;
+        font-family: "Playfair Display", serif;
         color: var(--dark-pink);
         font-size: 2.5rem;
         margin-bottom: 3rem;
         letter-spacing: 0.05em;
-    }
+      }
 
-    .carousel-container {
+      .carousel-container {
         max-width: 1200px;
         margin: 0 auto;
         position: relative;
         overflow: hidden;
         padding: 0 1rem;
-    }
+        display: flex;
+      }
 
-    .carousel-track {
+      .carousel-track {
         display: flex;
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         gap: 0.5rem;
-    }
+      }
 
-    .carousel-slide {
+      .carousel-slide {
         flex: 0 0 calc(33.33% - 0.5rem);
         padding: 0.5rem;
         position: relative;
         border-radius: 16px;
         overflow: hidden;
         transition: transform 0.3s;
-    }
+      }
 
-    .carousel-image {
+      .carousel-image {
         width: 80%;
         height: 380px;
         object-fit: cover;
         border-radius: 20px; /* Increased border radius */
         box-shadow: 0 4px 15px rgba(232, 93, 143, 0.1);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .carousel-slide:hover .carousel-image {
+      }
+
+      .carousel-slide:hover .carousel-image {
         transform: scale(1.05);
         box-shadow: 0 8px 25px rgba(232, 93, 143, 0.2);
-    }
+      }
 
-    .carousel-caption {
+      .carousel-caption {
         position: absolute;
         bottom: 20px;
         left: 50%;
@@ -175,9 +186,9 @@
         font-size: 0.9rem;
         backdrop-filter: blur(3px);
         white-space: nowrap;
-    }
+      }
 
-    .carousel-btn {
+      .carousel-btn {
         position: absolute;
         top: 45%;
         transform: translateY(-50%);
@@ -193,29 +204,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
 
-    .carousel-btn:hover {
+      .carousel-btn:hover {
         background: var(--dark-pink);
         transform: translateY(-50%) scale(1.15);
-    }
+      }
 
-    .carousel-btn.prev {
+      .carousel-btn.prev {
         left: 2rem;
-    }
+      }
 
-    .carousel-btn.next {
+      .carousel-btn.next {
         right: 2rem;
-    }
+      }
 
-    /* Dot indicators */
-    .carousel-dots {
+      /* Dot indicators */
+      .carousel-dots {
         text-align: center;
         margin-top: 2rem;
-    }
+      }
 
-    .dot {
+      .dot {
         display: inline-block;
         width: 10px;
         height: 10px;
@@ -224,258 +235,287 @@
         margin: 0 6px;
         cursor: pointer;
         transition: all 0.3s;
-    }
+      }
 
-    .dot.active {
+      .dot.active {
         background: var(--dark-pink);
         transform: scale(1.4);
         box-shadow: 0 2px 6px rgba(232, 93, 143, 0.3);
-    }
+      }
 
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
         .carousel-slide {
-            flex: 0 0 calc(50% - 2rem);
+          flex: 0 0 calc(50% - 2rem);
         }
-        
-        .carousel-image {
-            height: 300px;
-        }
-    }
 
-    @media (max-width: 768px) {
-        .carousel-slide {
-            flex: 0 0 100%;
-            scroll-snap-align: center;
-        }
-        
         .carousel-image {
-            height: 280px;
-            border-radius: 15px;
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-slide {
+          flex: 0 0 100%;
+          scroll-snap-align: center;
+        }
+
+        .carousel-image {
+          height: 280px;
+          border-radius: 15px;
         }
         .carousel-track {
-            justify-content: flex-start;
+          justify-content: flex-start;
         }
-        
+
         .gallery-title {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+          font-size: 2rem;
+          margin-bottom: 2rem;
         }
-    }
-    
-        .contact-section {
-            padding: 4rem 2rem;
-            background: white;
+      }
+
+      .contact-section {
+        padding: 4rem 2rem;
+        background: white;
+      }
+
+      .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-info {
+        background: var(--primary-pink);
+        padding: 3rem 2rem;
+        border-radius: 15px;
+        margin: 2rem 0;
+      }
+
+      .contact-info p {
+        margin: 1.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .phone-link {
+        color: var(--dark-pink);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .phone-link:hover {
+        color: var(--brand-pink);
+        text-decoration: underline;
+      }
+
+      .social-links {
+        margin-top: 2rem;
+      }
+
+      .social-links a {
+        color: var(--dark-pink);
+        font-size: 2.5rem;
+        margin: 0 1.5rem;
+        transition: transform 0.3s;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.2);
+        color: var(--brand-pink);
+      }
+
+      footer {
+        background-color: var(--brand-pink);
+        padding: 2rem;
+        text-align: center;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
         }
 
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-info {
-            background: var(--primary-pink);
-            padding: 3rem 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .contact-info p {
-            margin: 1.5rem 0;
-            font-size: 1.1rem;
-        }
-
-        .social-links {
-            margin-top: 2rem;
+        .hero h1 {
+          font-size: 2.5rem;
         }
 
         .social-links a {
-            color: var(--dark-pink);
-            font-size: 2.5rem;
-            margin: 0 1.5rem;
-            transition: transform 0.3s;
+          font-size: 2rem;
+          margin: 0 1rem;
         }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-            color: var(--brand-pink);
-        }
-
-        footer {
-            background-color: var(--brand-pink);
-            padding: 2rem;
-            text-align: center;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .social-links a {
-                font-size: 2rem;
-                margin: 0 1rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Ladan's Beauty Garden</div>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">Ladan's Beauty Garden</div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Mobile Nail Artistry & Care</h1>
-            <p>Bringing Beauty to Your Doorstep in Dire Dawa</p>
-        </div>
+      <div class="hero-content">
+        <h1>Mobile Nail Artistry & Care</h1>
+        <p>Bringing Beauty to Your Doorstep in Dire Dawa</p>
+      </div>
     </section>
 
     <section id="services" class="services">
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Luxury Manicures</h3>
-                <p>Premium gel treatments and spa experiences</p>
-            </div>
-            <div class="service-card">
-                <h3>Creative Nail Art</h3>
-                <p>Custom designs that reflect your personality</p>
-            </div>
-            <div class="service-card">
-                <h3>Nail Wellness</h3>
-                <p>Specialized care for healthy, strong nails</p>
-            </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Luxury Manicures</h3>
+          <p>Premium gel treatments and spa experiences</p>
         </div>
+        <div class="service-card">
+          <h3>Creative Nail Art</h3>
+          <p>Custom designs that reflect your personality</p>
+        </div>
+        <div class="service-card">
+          <h3>Nail Wellness</h3>
+          <p>Specialized care for healthy, strong nails</p>
+        </div>
+      </div>
     </section>
 
     <section class="gallery" id="gallery">
-        <h2 class="gallery-title">Our Beauty Gallery</h2>
-        <div class="carousel-container">
-            <button class="carousel-btn prev">❮</button>
-            <button class="carousel-btn next">❯</button>
-            
-            <div class="carousel-track" id="carouselTrack">
-                <!-- Slides will be inserted here by JavaScript -->
-            </div>
+      <h2 class="gallery-title">Our Beauty Gallery</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Slides will be inserted here by JavaScript -->
         </div>
-        
-        <div class="carousel-dots">
-            <!-- Dots will be added dynamically by JS -->
-        </div>
+      </div>
+
+      <div class="carousel-dots">
+        <!-- Dots will be added dynamically by JS -->
+      </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h2>Contact & Booking</h2>
-                <p><i class="fas fa-map-marker-alt"></i> House Calls in Dire Dawa, Ethiopia</p>
-                <p><i class="fas fa-phone"></i> (+251) 912-345-678</p>
-                <p><i class="fas fa-envelope"></i> ladan@beautygarden.com</p>
-                <div class="social-links">
-                    <a href="[Instagram URL]" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="[Telegram URL]" target="_blank"><i class="fab fa-telegram"></i></a>
-                </div>
-            </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact & Booking</h2>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> House Calls in Dire Dawa,
+            Ethiopia
+          </p>
+          <p>
+            <i class="fas fa-phone"></i
+            ><a href="tel:+251966389000" class="phone-link"
+              >(+251) 966-389-000</a
+            >
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/ladan__isse?igsh=cDl3amhramZvZjJz"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@nailsandeyelashe?_t=ZM-8ulKs23xif1&_r=1"
+              target="_blank"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="https://t.me/ladan_isse" target="_blank"
+              ><i class="fab fa-telegram"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
-        <p>© 2023 Ladan's Beauty Garden. All rights reserved.</p>
+      <p>© 2023 Ladan's Beauty Garden. All rights reserved.</p>
     </footer>
 
     <script>
-        const nailArtGallery = [
-    { filename: "1.jpg" },
-    { filename: "2.jpg" },
-    { filename: "3.jpg" },
-    { filename: "4.jpg" },
-    { filename: "5.jpg" },
-    { filename: "6.jpg" },
-    { filename: "7.jpg" },
-    { filename: "8.jpg" },
-    { filename: "9.jpg" },
-    { filename: "10.jpg" },
-    // Add more images as needed...
-];
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+      const nailArtGallery = [
+        { filename: "1.jpg" },
+        { filename: "2.jpg" },
+        { filename: "3.jpg" },
+        { filename: "4.jpg" },
+        { filename: "5.jpg" },
+        { filename: "6.jpg" },
+        { filename: "7.jpg" },
+        { filename: "8.jpg" },
+        { filename: "9.jpg" },
+        { filename: "10.jpg" },
+        // Add more images as needed...
+      ];
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
         });
+      });
 
-        // Carousel functionality
-        document.addEventListener('DOMContentLoaded', () => {
-    const carouselTrack = document.getElementById('carouselTrack');
-    const dotsContainer = document.querySelector('.carousel-dots');
+      // Carousel functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const carouselTrack = document.getElementById("carouselTrack");
+        const dotsContainer = document.querySelector(".carousel-dots");
 
-    // Generate slides from img folder
-    nailArtGallery.forEach((image, index) => {
-        const slide = document.createElement('div');
-        slide.className = 'carousel-slide';
-        slide.innerHTML = `
+        // Generate slides from img folder
+        nailArtGallery.forEach((image, index) => {
+          const slide = document.createElement("div");
+          slide.className = "carousel-slide";
+          slide.innerHTML = `
             <img src="img/${image.filename}" alt="${image.caption}" class="carousel-image">
         `;
-        carouselTrack.appendChild(slide);
-    });
-
-    // Initialize carousel after creating slides
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-    let currentIndex = 0;
-
-    // Create dots
-    dotsContainer.innerHTML = ''; // Clear existing dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if(index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-
-    // Carousel controls
-    document.querySelector('.next').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-    });
-
-    function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-    }
-
-    function updateCarousel() {
-        const slideWidth = slides[0].clientWidth;
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        document.querySelectorAll('.dot').forEach((dot, i) => {
-            dot.classList.toggle('active', i === currentIndex);
+          carouselTrack.appendChild(slide);
         });
-    }
 
-    // Handle responsive changes
-    window.addEventListener('resize', updateCarousel);
-});
+        // Initialize carousel after creating slides
+        const track = document.querySelector(".carousel-track");
+        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+        let currentIndex = 0;
+
+        // Create dots
+        dotsContainer.innerHTML = ""; // Clear existing dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement("span");
+          dot.classList.add("dot");
+          if (index === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        // Carousel controls
+        document.querySelector(".next").addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+        });
+
+        document.querySelector(".prev").addEventListener("click", () => {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          updateCarousel();
+        });
+
+        function goToSlide(index) {
+          currentIndex = index;
+          updateCarousel();
+        }
+
+        function updateCarousel() {
+          const slideWidth = slides[0].clientWidth;
+          track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+          document.querySelectorAll(".dot").forEach((dot, i) => {
+            dot.classList.toggle("active", i === currentIndex);
+          });
+        }
+
+        // Handle responsive changes
+        window.addEventListener("resize", updateCarousel);
+      });
     </script>
-</body>
+  </body>
 </html>
